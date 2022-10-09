@@ -9,21 +9,30 @@
     <h2>Welcome To GDSC_CGC_CEC</h2>
     <form>
         <p>
-            <label>Name : <input type="text" /></label>
+            <label>Name : <input type="text" id="name" /></label>
         </p>
         <p>
-            <label>Email : <input type="email" /></label>
+            <label>Email : <input type="email" id="email"/></label>
         </p>
         <p>
-            <label>Contact : <input type="number" /></label>
+            <label>Contact : <input type="number" id="contact"/></label>
         </p>
         <p>
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="doThis(event)">Submit</button>
         </p>
     </form>
 </body>
 <script>
-    // Write code here to print input values in console.
+    function doThis(e){
+        e.preventDefault();
+        var x = document.getElementById("name");
+        var y = document.getElementById("email");
+        var z = document.getElementById("contact");
+
+        console.log(x.value);
+        console.log(y.value);
+        console.log(z.value);
+    }
 </script>
 
 </html>
